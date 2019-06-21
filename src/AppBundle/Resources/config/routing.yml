@@ -1,0 +1,22 @@
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+app_projet:
+    resource: "@AppBundle/Resources/config/routing/projet.yml"
+    prefix:   /projet
+
+
+app_association:
+    resource: "@AppBundle/Resources/config/routing/association.yml"
+    prefix:   /association
+
+
+app_donation:
+    resource: "@AppBundle/Resources/config/routing/donation.yml"
+    prefix:   /donation
+
+
+app_partner:
+    resource: "@AppBundle/Resources/config/routing/partner.yml"
+    prefix:   /partner

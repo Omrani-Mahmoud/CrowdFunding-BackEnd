@@ -1,0 +1,32 @@
+donation_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Donation:index" }
+    methods:  GET
+
+donation_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Donation:show" }
+    methods:  GET
+
+donation_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Donation:new" }
+    methods:  [GET, POST]
+
+donation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Donation:edit" }
+    methods:  [GET, POST]
+
+donation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Donation:delete" }
+    methods:  DELETE
+
+Verif_donation_API:
+     path:     /verifDonation
+     defaults: { _controller: AppBundle:Donation:VerifDonationStatus, _format: json}
+
+add_donation_api:
+     path:     /addDonation
+     defaults: { _controller: AppBundle:Donation:AddDonation, _format: json}

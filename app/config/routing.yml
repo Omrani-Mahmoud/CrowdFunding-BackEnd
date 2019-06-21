@@ -1,0 +1,9 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+lucerna:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /Crowd
+

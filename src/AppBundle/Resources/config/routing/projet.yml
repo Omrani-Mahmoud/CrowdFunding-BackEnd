@@ -1,0 +1,29 @@
+projet_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Projet:index" }
+    methods:  GET
+
+projet_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Projet:show" }
+    methods:  GET
+
+projet_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Projet:new" }
+    methods:  [GET, POST]
+
+projet_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Projet:edit" }
+    methods:  [GET, POST]
+
+projet_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Projet:delete" }
+    methods:  DELETE
+
+
+show_projet_api:
+     path:     /show
+     defaults: { _controller: AppBundle:Projet:affichageProjetByAssoAndTheme, _format: json}

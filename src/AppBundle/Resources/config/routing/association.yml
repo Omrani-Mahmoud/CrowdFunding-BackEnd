@@ -1,0 +1,34 @@
+association_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Association:index" }
+    methods:  GET
+
+association_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Association:show" }
+    methods:  GET
+
+association_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Association:new" }
+    methods:  [GET, POST]
+
+association_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Association:edit" }
+    methods:  [GET, POST]
+
+association_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Association:delete" }
+    methods:  DELETE
+
+
+showAssociation_ByTheme_API:
+     path:     /showAss
+     defaults: { _controller: AppBundle:Association:ShowAssociation, _format: json}
+
+
+searchAssociation_API:
+     path:     /findAsso
+     defaults: { _controller: AppBundle:Association:SearchAssociation, _format: json}
