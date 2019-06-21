@@ -36,3 +36,8 @@ user_NbClick_API:
      path:     /nbClick
      defaults: { _controller: AppBundle:User:HistoriqueClick, _format: json}
 
+user_profile_API:
+     path:     /profile
+     defaults: { _controller: AppBundle:User:profile, _format: json}
+
+

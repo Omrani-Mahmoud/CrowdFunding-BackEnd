@@ -221,6 +221,26 @@ class UserController extends Controller
          $jsonContent = $serializer->normalize($nbClick);
          return new JsonResponse($jsonContent);
      }
+     function profileAction(Request $request){
+         $userLoged=$request->get('id');
+
+         $em = $this->getDoctrine()->getManager();
+
+         $profile=$em->getRepository('AppBundle:User')->findOneBy(array(
+             'id'=>$userLoged
+         ));
+         //var_dump($nbClick);
+         $normalizer = new ObjectNormalizer();
+         $normalizer->setCircularReferenceLimit(2);
+         // Add Circular reference handler
+         $normalizer->setCircularReferenceHandler(function ($object) {
+             return $object;
+         });
+         $serializer = new Serializer([$normalizer]);
+
+         $jsonContent = $serializer->normalize($profile);
+         return new JsonResponse($jsonContent);
+     }
 
 
 }
